@@ -1,6 +1,20 @@
-import express from "express"
-const app = express();
+import express, { urlencoded } from "express"
+import cors from "cors";
+import dotenv from "dotenv";
+import userRoutes from "./routes/userRoutes.js"
+import connectDB from "./db/connectDB.js";
 
-app.listen(5000,()=>{
+dotenv.config();
+
+const PORT = process.env.PORT||5000;
+
+const app = express();
+app.use(urlencoded({extended:true}));
+app.use(express.json());
+
+app.use("/api/auth",userRoutes);
+
+app.listen(PORT,()=>{
     console.log("Listening on port 5000")
+    connectDB();
 })
