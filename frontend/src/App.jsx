@@ -6,6 +6,8 @@ import './App.css'
 import Login from './login'
 import Home from './home';
 import Register from './register';
+import BloodRequest from './bloodRequest';
+import MakeRequest from './makeRequest';
 
 function App() {
   
@@ -16,6 +18,8 @@ function App() {
         <Route path='/' element={<Login/>}></Route>
         <Route path='/home' element={<Home/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
+        <Route path='/bloodRequest' element={<BloodRequest/>}></Route>
+        <Route path='/makeRequest' element={<MakeRequest/>}></Route>
       </Routes>
     </Router>
   )

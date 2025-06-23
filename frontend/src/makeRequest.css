@@ -1,0 +1,75 @@
+/* Container styling */
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: crimson;
+}
+
+/* Form layout */
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Input and select fields */
+.request-form input,
+.request-form select {
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.request-form input:focus,
+.request-form select:focus {
+  border-color: crimson;
+  outline: none;
+}
+
+/* Submit button */
+.request-form button[type="submit"] {
+  background-color: crimson;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.request-form button[type="submit"]:hover {
+  background-color: darkred;
+}
+
+/* Responsive: Stack inputs nicely on small screens */
+@media screen and (max-width: 600px) {
+  .form-container {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+  .request-form input,
+  .request-form select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .request-form button[type="submit"] {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
