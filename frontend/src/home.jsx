@@ -13,8 +13,9 @@ export default function Home(){
         <>
             <h1>Home Page</h1>
             <div className="nav">
-                <a href="/bloodRequest">Blood Requests</a>
                 <a href="/events">Events</a>
+                <a href="/bloodRequest">Blood Requests</a>
+                <a href="/feedback">Feedback</a>
                 <a href="/about">About</a>
             </div>
             

@@ -4,7 +4,8 @@ import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js"
 import bloodRequestRoutes from "./routes/bloodRequestRoutes.js"
 import connectDB from "./db/connectDB.js";
-
+import feedbackRoutes from "./routes/feedbackRoutes.js"
+import postEventRoutes from "./routes/eventRoutes.js"
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.use(express.json());
 
 app.use("/api/auth",userRoutes);
 app.use("/api/req",bloodRequestRoutes);
+app.use("/api/feedback",feedbackRoutes);
+app.use("/api/event",postEventRoutes)
 
 app.listen(PORT,()=>{
     console.log("Listening on port 5000")

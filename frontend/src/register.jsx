@@ -36,6 +36,7 @@ export default function Register(){
                 <input type="text" placeholder="fullName" onChange={(e)=>{setFullName(e.target.value)}} />
                 <button onClick={handleSubmit}>Register</button>
             </div>
+            <a href="/">Login</a>
         </>
     )
 }

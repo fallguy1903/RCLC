@@ -8,6 +8,8 @@ import Home from './home';
 import Register from './register';
 import BloodRequest from './bloodRequest';
 import MakeRequest from './makeRequest';
+import Feedback from './feedback';
+import ShowFeedback from './showFeedback';
 
 function App() {
   
@@ -20,6 +22,8 @@ function App() {
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/bloodRequest' element={<BloodRequest/>}></Route>
         <Route path='/makeRequest' element={<MakeRequest/>}></Route>
+        <Route path='/feedback' element={<Feedback/>}></Route>
+        <Route path='/showFeedback' element={<ShowFeedback/>}></Route>
       </Routes>
     </Router>
   )
