@@ -11,6 +11,7 @@ import MakeRequest from './makeRequest';
 import Feedback from './feedback';
 import ShowFeedback from './showFeedback';
 import Events from './events';
+import CreateEvent from './createEvent';
 
 function App() {
   
@@ -25,7 +26,8 @@ function App() {
         <Route path='/makeRequest' element={<MakeRequest/>}></Route>
         <Route path='/feedback' element={<Feedback/>}></Route>
         <Route path='/showFeedback' element={<ShowFeedback/>}></Route>
-        <Route path='/events' element={<Events/>}></Route>
+        <Route path='/events' element={<Events/>}></Route>  
+        <Route path='/createEvent' element={<CreateEvent/>}></Route>  
       </Routes>
     </Router>
   )

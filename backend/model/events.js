@@ -20,6 +20,9 @@ const eventSchema = mongoose.Schema({
     hasTicket:{
         type:Boolean,
         default:false,
+    },
+    imageURL:{
+        type:String
     }
 })
 
