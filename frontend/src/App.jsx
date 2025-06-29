@@ -12,6 +12,8 @@ import Feedback from './feedback';
 import ShowFeedback from './showFeedback';
 import Events from './events';
 import CreateEvent from './createEvent';
+import Manage from './Manage';
+
 
 function App() {
   
@@ -28,6 +30,7 @@ function App() {
         <Route path='/showFeedback' element={<ShowFeedback/>}></Route>
         <Route path='/events' element={<Events/>}></Route>  
         <Route path='/createEvent' element={<CreateEvent/>}></Route>  
+        <Route path='/manage' element={<Manage/>}></Route>  
       </Routes>
     </Router>
   )

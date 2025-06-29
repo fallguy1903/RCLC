@@ -43,7 +43,11 @@ export const login = async(req,res)=>{
         if(bcrypt.compareSync(password, user.password))
         {
             generateTokenAndSetCookie(user._id,res);
-            res.status(200).send("User Logged in");
+            const { _id, memberId, fullName, role } = user;
+            res.status(200).json({
+            msg: "User Logged in",
+            user: { _id, memberId, fullName, role }
+            });
         }
         else    
         res.status(400).send("Wrong credentials");        

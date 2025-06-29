@@ -12,6 +12,8 @@ export default function Login()
         try {
             const res = await axios.post("http://localhost:5000/api/auth/login",{memberId,password});
             console.log(res);
+            const user = res.data.user; 
+            localStorage.setItem("user", JSON.stringify(user));
             navigate('/home');    
         } catch (error) {
             console.log("Register before Login")
