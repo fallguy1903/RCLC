@@ -13,7 +13,7 @@ export const getUsers = async(req,res)=>{
 
 export const removeUser = async (req, res) => {
   try {
-    const  memberId  = String(req.body.memberId);
+    const  memberId  = String(req.params.memberId);
     
     const response = await User.deleteOne({ memberId });
 
