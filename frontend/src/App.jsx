@@ -13,7 +13,7 @@ import ShowFeedback from './showFeedback';
 import Events from './events';
 import CreateEvent from './createEvent';
 import Manage from './Manage';
-
+import EditUser from './editUser';
 
 function App() {
   
@@ -31,6 +31,7 @@ function App() {
         <Route path='/events' element={<Events/>}></Route>  
         <Route path='/createEvent' element={<CreateEvent/>}></Route>  
         <Route path='/manage' element={<Manage/>}></Route>  
+        <Route path='/editUser/:id' element={<EditUser/>}></Route>  
       </Routes>
     </Router>
   )

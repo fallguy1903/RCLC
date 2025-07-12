@@ -23,3 +23,30 @@ export const removeUser = async (req, res) => {
     res.status(500).json({ err: "Internal Server error" });
   }
 };
+
+export const getUser = async(req,res)=>{
+  try {
+    const  memberId  = String(req.params.memberId);
+
+    const response = await User.findOne({memberId});
+
+    res.status(200).json(response)
+  } catch (error) {
+    res.status(500).json({msg:"failed to fetch member Details"})
+  }
+}
+
+export const editUser = async(req,res)=>{
+  try {
+    const memberId = String(req.params.memberId);
+
+    await User.updateOne({memberId},req.body);
+
+    res.status(200).json({msg:"Updated successfully"})
+
+
+  } catch (error) { 
+    res.status(500).json({error:"unable to update at the moment"})
+    
+  }
+}
