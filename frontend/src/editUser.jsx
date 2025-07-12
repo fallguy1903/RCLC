@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function EditUser() {
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const [memberId, setMemberId] = useState("");
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
@@ -36,6 +37,7 @@ export default function EditUser() {
         fullName
       });
       alert("User updated successfully!");
+      navigate('/manage')
     } catch (error) {
       console.error("Failed to update user:", error);
       alert("Error updating user");
