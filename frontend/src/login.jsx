@@ -25,7 +25,7 @@ export default function Login()
     <>
     <div className="Login">
         <input type="text" placeholder="MemberId" onChange={(e)=>{setMemberId(e.target.value)}} />
-        <input type="text" placeholder="password" onChange={(e)=>{setPassword(e.target.value)}} />
+        <input type="password" placeholder="password" onChange={(e)=>{setPassword(e.target.value)}} />
         <button onClick={handleSubmit}>Login</button>
         <a href="/register">Register</a>
     </div>

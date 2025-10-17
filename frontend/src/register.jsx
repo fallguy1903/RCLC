@@ -12,10 +12,11 @@ export default function Register(){
         evt.preventDefault();
         try {
             
-            const res = axios.post("http://localhost:5000/api/auth/register",{memberId,password,mobile,fullName})
+            const res = await axios.post("http://localhost:5000/api/auth/register",{memberId,password,mobile,fullName})
             if(res.status===200 && !res.status.error)
             {
                 console.log(res);
+                alert("registered Successfully")
                 navigate('/home'); 
             }
             else
@@ -40,3 +41,5 @@ export default function Register(){
         </>
     )
 }
+
+

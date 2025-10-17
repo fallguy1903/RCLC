@@ -1,6 +1,6 @@
 import express from "express";
 import { getFeedback, PostFeedback } from "../controller/feedbackController.js";
-
+import { ProtectRoute } from "../middleware/protectRoute.js";
 const router = express.Router();
 
 router.post("/postFeedback",PostFeedback);

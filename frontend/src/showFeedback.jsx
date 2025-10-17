@@ -7,7 +7,7 @@ export default function ShowFeedback(){
     
     useEffect(()=>{
         const fetchRequests = async()=>{    
-            const res = await axios.get("http://localhost:5000/api/feedback/getFeedback");
+            const res = await axios.get("http://localhost:5000/api/feedback/getFeedback",{ withCredentials: true });
             setFeedbacks(res.data);
         }
         fetchRequests();

@@ -5,6 +5,7 @@ import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js
 export const registerUser = async (req,res)=>{
     try {
         const {memberId,password,mobile,fullName} = req.body;
+        console.log("Request Body:", req.body);
         const user = await User.findOne({memberId});
         if(user)
             res.status(200).json({err:"member already exists"});
